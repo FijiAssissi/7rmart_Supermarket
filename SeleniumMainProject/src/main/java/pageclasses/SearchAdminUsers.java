@@ -6,10 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.WaitUtilities;
+
 public class SearchAdminUsers 
 {
 	public WebDriver driver;
-	
+	WaitUtilities waitutility=new WaitUtilities();
 	public SearchAdminUsers(WebDriver driver)
 	{
 		this.driver=driver;
@@ -24,24 +26,28 @@ public class SearchAdminUsers
  /*
  @FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[2]")WebElement searchResultUserType;
  */
- public void clickOnsearch()
+ public SearchAdminUsers clickOnsearch()
  {
+	 waitutility.waitForElementToClick(driver, searchIcon);//using waitutilityobject calling methods in that class
 	 searchIcon.click();
+	 return this;
  }
- public void addSearchDetails()
+ public SearchAdminUsers addSearchDetails()
  {
+	waitutility.waitForElementToSelect(driver, userNameSearch);
 	userNameSearch.sendKeys("FF1234"); 
 	Select select= new Select(UserTypeSearch);
 	select.selectByVisibleText("Staff");
+	return this;
  }
- public void searchSubmit()
+ public SearchAdminUsers searchSubmit()
  {
 	 searchBtn.click();
+	 return this;
  }
- public String searchresult()
+ public boolean searchResultDisplayed()
  {
-	 String expected=searchResultUserName.getText();
-	 return expected;		
+	 	return searchResultUserName.isDisplayed();	
  }
  
 }
