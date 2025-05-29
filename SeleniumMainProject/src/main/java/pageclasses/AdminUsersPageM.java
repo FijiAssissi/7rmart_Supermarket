@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import utilities.WaitUtilities;
-
+//admin users page
 	public class AdminUsersPageM
 	{
 		public WebDriver driver;
@@ -19,7 +19,7 @@ import utilities.WaitUtilities;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']")WebElement adminMoreInfo;
+	
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")WebElement newAdminIcon;
 	@FindBy(xpath = "//input[@id='username']")WebElement usernameTextField;
 	@FindBy(xpath="//input[@id='password']")WebElement passWordTextField;
@@ -28,30 +28,30 @@ import utilities.WaitUtilities;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertSuccess;
 //	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement alertFail;
 	
-	public void adminUsersMoreInfoClick()
-	{
-		waitutility.waitForElementToClick(driver, adminMoreInfo);
-		adminMoreInfo.click();
-	}
-	public void NewAdminUserclick()
+	
+	public AdminUsersPageM NewAdminUserclick()//it is not going to any other pages, same page
 	{
 		newAdminIcon.click();
+		return this;
 	}
-	public void addAdminUserInfor()
+	public AdminUsersPageM addAdminUserInfor()
 	{
 		usernameTextField.sendKeys("FFABC11234");
 		passWordTextField.sendKeys("112233");
+		return this;
 	}
-	public void UserTypeDropDown()
+	public AdminUsersPageM UserTypeDropDown()
 	{
 		//UserTypeDropDown.click();	
 		Select select=new Select(UserTypeDropDown);
 		select.selectByVisibleText("Staff");
+		return this;
 	}
-	public void clickOnSave()
+	public AdminUsersPageM clickOnSave()
 	{
 		waitutility.waitForElementToClick(driver, saveBtn);
 		saveBtn.click();
+		return this;
 		
 	}
 	public boolean isAlertSuccessDisplayed()

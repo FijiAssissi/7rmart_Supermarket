@@ -6,50 +6,63 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import constant.Constants;
+import pageclasses.HomepageM;
 import pageclasses.LoginPageM;
 
-public class LogintestM extends BaseM{
-  @Test
-  public void verifyLoginUserpasswdtest1() 
-  {
-	 LoginPageM loginPageM=new LoginPageM(driver);
-	 loginPageM.addUserNamePassWord("admin","admin");
-	 loginPageM.clickSignIn();  
-	 boolean dashBoardIsLoaded=loginPageM.isDashboardDisplayed();
-	 System.out.println(dashBoardIsLoaded);
-	 Assert.assertTrue(dashBoardIsLoaded, "dashboard is not loaded");
-	 
-  }
-  public void verifyLoginUserpasswdtest2() // Correct Username and  wrong password
-  {
-	 LoginPageM loginPageM=new LoginPageM(driver);
-	 loginPageM.addUserNamePassWord("admin","adminh");
-	 loginPageM.clickSignIn();  
-	 boolean loginAlertisDisplayed=loginPageM.isAlertDisplayed();
-	 Assert.assertTrue(loginAlertisDisplayed, Constants.ERRORMESSAGEFOR);
-  }
-  
+public class LogintestM extends BaseM //extends base class which has @before method and @after method
+{
+	HomepageM home; //globally declaring 
+	//store the result of the successful login
+	
+	@Test
+	public void verifyLoginUserpasswdtest1() {
+		LoginPageM loginPageM = new LoginPageM(driver);
+		loginPageM.addUserNamePassWord("admin", "admin");
+		//loginPageM.clickSignIn();
+		home=loginPageM.clickSignIn();//return the successful login page and storing it in the home variable
+		boolean dashBoardIsLoaded = loginPageM.isDashboardDisplayed();
+		System.out.println(dashBoardIsLoaded);
+		Assert.assertTrue(dashBoardIsLoaded, Constants.ERRORMESSAGEFORLOGIN);
+
+	}
+
+	public void verifyLoginUserpasswdtest2() // Correct Username and wrong password
+	{
+		LoginPageM loginPageM = new LoginPageM(driver);
+		loginPageM.addUserNamePassWord("admin", "adminh");
+		//loginPageM.clickSignIn();
+		home=loginPageM.clickSignIn();
+		boolean loginAlertisDisplayed = loginPageM.isAlertDisplayed();
+		Assert.assertTrue(loginAlertisDisplayed, Constants.ERRORMESSAGEFORLOGIN);
+	}
+
 //Correct Username and  wrong password
-  @Test(priority = 1,dataProvider ="SignInDeatils")
-  public void verifyLoginUserpasswdtest3(String username , String password) 
-  {
-	 LoginPageM loginPageM=new LoginPageM(driver);
-	 loginPageM.addUserNamePassWord(username,password);
-	 loginPageM.clickSignIn();  
-  }
-  @DataProvider(name="SignInDeatils") 
-  public Object[][] testData()
-  {
-	  Object data[][]= {{"admgin","1234"},{"admmin","admmin"},{"admin", "admin"}};
-	  return data;
-  }
-  @Test
-  //here the values passed through the signiNparaxml file
-  @Parameters({"usernamep","passwordp"})
-  public void verifyLoginUserpasswdtest4(String username , String password) 
-  {
-	 LoginPageM loginPageM=new LoginPageM(driver);
-	 loginPageM.addUserNamePassWord(username,password);
-	 loginPageM.clickSignIn();  
-  }
+	@Test(priority = 1, dataProvider = "SignInDeatils")
+	public void verifyLoginUserpasswdtest3(String username, String password) {
+		LoginPageM loginPageM = new LoginPageM(driver);
+		loginPageM.addUserNamePassWord(username, password);
+		//loginPageM.clickSignIn();
+		home=loginPageM.clickSignIn();
+		boolean loginAlertisDisplayed = loginPageM.isAlertDisplayed();
+		Assert.assertTrue(loginAlertisDisplayed, Constants.ERRORMESSAGEFORLOGIN);
+	}
+
+	@DataProvider(name = "SignInDeatils")
+	public Object[][] testData() {
+		Object data[][] = { { "admgin", "1234" }, { "admmin", "admmin" }, { "admin", "admin" } };
+		return data;
+	}
+
+	@Test
+	// here the values passed through the signiNparaxml file
+	@Parameters({ "usernamep", "passwordp" })
+	public void verifyLoginUserpasswdtest4(String username, String password) {
+		LoginPageM loginPageM = new LoginPageM(driver);
+		loginPageM.addUserNamePassWord(username, password);
+		//loginPageM.clickSignIn();
+		home=loginPageM.clickSignIn();
+		boolean loginAlertisDisplayed = loginPageM.isAlertDisplayed();
+		Assert.assertTrue(loginAlertisDisplayed, Constants.ERRORMESSAGEFORLOGIN);// calling static variable using
+																					// classname.variable Name
+	}
 }
