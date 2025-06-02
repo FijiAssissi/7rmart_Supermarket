@@ -1,5 +1,11 @@
 package pageclasses;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,9 +26,12 @@ public class ManageCategoryPageM
 	//@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and @class='small-box-footer']")WebElement manageCategoryMoreInfo;
 	@FindBy(xpath = "//a[@onclick='click_button(1)']") WebElement manageCategoryNewIcon;
 	@FindBy(xpath = "//input[@id='category']")WebElement CategoryName;
+	@FindBy(xpath = "//li[@id='134-selectable']")WebElement discountClick;
 	//@FindBy(xpath = "//input[@id='main_img']") WebElement manageCategoryChooseFileIcon;
+	
 	@FindBy(xpath = "//input[@type='file']") WebElement manageCategoryChooseFileIcon;
-	@FindBy(xpath="//button[text()='Save']") WebElement manageCategorySaveBtn;
+	@FindBy(xpath="//button[@type='submit']") WebElement manageCategorySaveBtn;
+	//@FindBy(xpath="//button[@type='submit' and @name='create']") WebElement manageCategorySaveBtn;
 	
 	/*
 	public void manageCategoryMoreInforClick()
@@ -41,21 +50,45 @@ public class ManageCategoryPageM
 		CategoryName.sendKeys("Books");
 		return this;
 	}
+	public ManageCategoryPageM clickOnDiscount()
+	{
+		discountClick.click();
+		return this;
+	}
+	/*
 	public ManageCategoryPageM clickChooseFile()
 	{
 		wait.waitForElementToClick(driver, manageCategoryChooseFileIcon);
-		manageCategoryChooseFileIcon.click();
+	//	manageCategoryChooseFileIcon.click();
 		return this;
 	}
-	public ManageCategoryPageM addCategoryImage()
+	*/
+	public ManageCategoryPageM addCategoryImage() throws AWTException
 	{
-		wait.waitForElementToSelect(driver,manageCategoryChooseFileIcon);
+		wait.waitForvisibility(driver, manageCategoryChooseFileIcon);
+		//manageCategoryChooseFileIcon.click();
 		manageCategoryChooseFileIcon.sendKeys("C:\\Users\\jerri\\Downloads\\books.jpg");
+		/*
+		StringSelection selection=new StringSelection("C:\\Users\\jerri\\Downloads\\books.jpg");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
+		Robot robot=new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+		*/
 		return this;
 	}
 	public ManageCategoryPageM clickOnSaveBtn()
 	{
+		wait.waitForElementToClick(driver, manageCategorySaveBtn);
 		manageCategorySaveBtn.click();
 		return this;
 	}
+	
+	public boolean isCategoryNameAdded()
+	{
+		return CategoryName.isDisplayed();
+	}
+	
 }
