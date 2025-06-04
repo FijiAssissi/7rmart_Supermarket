@@ -19,7 +19,9 @@ public class HomepageM
 @FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']")WebElement adminMoreInfo;
 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='active nav-link']") WebElement manageNewsMoreInfo;
 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and @class='small-box-footer']")WebElement manageCategoryMoreInfo;
-
+@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact']")WebElement manageContactMoreInfo;
+@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-product' and @class='small-box-footer']")WebElement managePrdt12MoreInfo;
+@FindBy(xpath ="//a[@href=\"https://groceryapp.uniqassosiates.com/admin/list-footertext\"and @class='small-box-footer']" )WebElement manageFooterMoreInfo;
 	public HomepageM ClickOnAdminIcon()//when selecting admin , click on admin and click logout
 	//so here actions happen in the Homepage itself and it is not going to any other pages
 	{
@@ -51,5 +53,21 @@ public class HomepageM
 	{
 		manageCategoryMoreInfo.click();
 		return new ManageCategoryPageM(driver);
+	}
+	public ManageContactPageM manageContactMoreInfo()
+	{
+		manageContactMoreInfo.click();
+		return new ManageContactPageM(driver);
+	}
+	public ManageProduct12PageM managePrdt12MoreInoClick()
+	{
+		managePrdt12MoreInfo.click();
+		return new ManageProduct12PageM(driver);
+	}
+	public ManageFooterTextpageM manageFooterMoreInfoClick()
+	{
+		manageFooterMoreInfo.click();
+		return new ManageFooterTextpageM(driver);
+		
 	}
 }

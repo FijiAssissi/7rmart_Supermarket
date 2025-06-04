@@ -6,17 +6,22 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.FileUploadUtility;
+import utilities.PageUtilities;
 import utilities.WaitUtilities;
 
 public class ManageCategoryPageM 
 {
 	public WebDriver driver;
 	WaitUtilities wait= new WaitUtilities();
+	FileUploadUtility fileUpload=new FileUploadUtility();
+	PageUtilities pageUtility=new PageUtilities();
 	public ManageCategoryPageM(WebDriver driver)
 	{
 		this.driver=driver;
@@ -66,8 +71,11 @@ public class ManageCategoryPageM
 	public ManageCategoryPageM addCategoryImage() throws AWTException
 	{
 		wait.waitForvisibility(driver, manageCategoryChooseFileIcon);
+		fileUpload.sendKeysForFileUplad(manageCategoryChooseFileIcon, "C:\\Users\\jerri\\Downloads\\books.jpg");//used fileupload class object
+		/*written this code in the page utility class
 		//manageCategoryChooseFileIcon.click();
 		manageCategoryChooseFileIcon.sendKeys("C:\\Users\\jerri\\Downloads\\books.jpg");
+		*/
 		/*
 		StringSelection selection=new StringSelection("C:\\Users\\jerri\\Downloads\\books.jpg");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
@@ -81,6 +89,10 @@ public class ManageCategoryPageM
 	}
 	public ManageCategoryPageM clickOnSaveBtn()
 	{
+		wait.waitForvisibility(driver, manageCategorySaveBtn);
+		//pageUtility.scrollBy();
+		JavascriptExecutor scriptExecuter=(JavascriptExecutor) driver;
+		scriptExecuter.executeScript("window.scrollBy(0,2000)", "");
 		wait.waitForElementToClick(driver, manageCategorySaveBtn);
 		manageCategorySaveBtn.click();
 		return this;
