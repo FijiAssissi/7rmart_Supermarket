@@ -1,5 +1,7 @@
 package testclasses;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -8,6 +10,7 @@ import org.testng.annotations.Test;
 import constant.Constants;
 import pageclasses.HomepageM;
 import pageclasses.LoginPageM;
+import utilities.ExcelUtitlities;
 
 public class LogintestM extends BaseM //extends base class which has @before method and @after method
 {
@@ -15,9 +18,11 @@ public class LogintestM extends BaseM //extends base class which has @before met
 	//store the result of the successful login
 	
 	@Test
-	public void verifyLoginUserpasswdtest1() {
+	public void verifyLoginUserpasswdtest1() throws IOException {
 		LoginPageM loginPageM = new LoginPageM(driver);
-		loginPageM.addUserNamePassWord("admin", "admin");
+		String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");
+		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
+		loginPageM.addUserNamePassWord(userName, password);
 		//loginPageM.clickSignIn();
 		home=loginPageM.clickSignIn();//return the successful login page and storing it in the home variable
 		boolean dashBoardIsLoaded = loginPageM.isDashboardDisplayed();

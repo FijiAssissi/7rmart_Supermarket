@@ -6,12 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtilities;
 import utilities.WaitUtilities;
 //admin users page
 	public class AdminUsersPageM
 	{
 		public WebDriver driver;
 		WaitUtilities waitutility=new WaitUtilities();
+		PageUtilities pageUtility=new PageUtilities();
 		
 	public AdminUsersPageM(WebDriver driver)
 	{
@@ -43,8 +45,9 @@ import utilities.WaitUtilities;
 	public AdminUsersPageM UserTypeDropDown()
 	{
 		//UserTypeDropDown.click();	
-		Select select=new Select(UserTypeDropDown);
-		select.selectByVisibleText("Staff");
+		//Select select=new Select(UserTypeDropDown);
+		//select.selectByVisibleText("Staff");
+		pageUtility.selectByVisibleText(UserTypeDropDown, "Staff");
 		return this;
 	}
 	public AdminUsersPageM clickOnSave()

@@ -23,7 +23,7 @@ public class ManageNewsPageM
 	@FindBy(xpath="//button[text()='Save']")WebElement saveBtn;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") WebElement successAlertNewsInfor;
 	
-	/*//from home page ,after click it is coimg to the manageNews page
+	/*//from home page ,after click it is coming to the manageNews page
 	public ManageNewsPageM manageNewsIcon()
 	{
 		manageNewsMoreInfo.click();
