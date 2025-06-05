@@ -1,5 +1,7 @@
 package testclasses;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,6 +11,7 @@ import pageclasses.HomepageM;
 import pageclasses.LoginPageM;
 import pageclasses.ManageContactPageM;
 import pageclasses.ManageNewsPageM;
+import utilities.ExcelUtitlities;
 
 public class ManageContactUSTestM extends BaseM 
 {
@@ -17,10 +20,12 @@ public class ManageContactUSTestM extends BaseM
 	ManageNewsPageM manageCategory;
 	ManageContactPageM manageContactUs;
   @Test
-  public void manageContactUs() 
+  public void manageContactUs() throws IOException 
   {
 	  LoginPageM loginPageM=new LoginPageM(driver);
-		 loginPageM.addUserNamePassWord("admin","admin");
+	  String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 
+		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
+		loginPageM.addUserNamePassWord(userName, password);
 		 home=loginPageM.clickSignIn(); 
 		 home.manageContactMoreInfo();
 		 ManageContactPageM manageContactUs=new ManageContactPageM(driver);

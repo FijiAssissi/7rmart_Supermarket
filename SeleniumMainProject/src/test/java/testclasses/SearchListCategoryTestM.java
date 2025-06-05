@@ -1,5 +1,7 @@
 package testclasses;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,6 +11,7 @@ import pageclasses.LoginPageM;
 import pageclasses.ManageContactPageM;
 import pageclasses.ManageNewsPageM;
 import pageclasses.SearchListCategoriesPageM;
+import utilities.ExcelUtitlities;
 
 public class SearchListCategoryTestM extends BaseM
 {
@@ -16,10 +19,12 @@ public class SearchListCategoryTestM extends BaseM
 	HomepageM home;
 	SearchListCategoriesPageM searchCategory;
   @Test
-  public void searchListCategory() 
+  public void searchListCategory() throws IOException 
   {
 	  LoginPageM loginPageM=new LoginPageM(driver);
-		 loginPageM.addUserNamePassWord("admin","admin");
+	  String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 
+		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
+		loginPageM.addUserNamePassWord(userName, password);
 		 home=loginPageM.clickSignIn(); 
 		 home.manageCategoryMoreInforClick();
 		 SearchListCategoriesPageM searchListCategory=new SearchListCategoriesPageM(driver);

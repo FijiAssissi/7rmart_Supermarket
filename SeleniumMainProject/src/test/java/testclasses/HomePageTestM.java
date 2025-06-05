@@ -1,10 +1,13 @@
 package testclasses;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import constant.Constants;
 import pageclasses.LoginPageM;
+import utilities.ExcelUtitlities;
 import pageclasses.HomepageM;
 
 public class HomePageTestM extends BaseM
@@ -13,7 +16,7 @@ public class HomePageTestM extends BaseM
 	LoginPageM login;
 	HomepageM home;
   @Test
-  public void ClickOnAdmin() 
+  public void ClickOnAdmin() throws IOException 
   {
 	  /*
 	  	LoginPageM loginPageM=new LoginPageM(driver);
@@ -24,10 +27,12 @@ public class HomePageTestM extends BaseM
 	  */
 	  //System.out.println(driver.getTitle());
 	  LoginPageM loginPageM=new LoginPageM(driver);
-		 loginPageM.addUserNamePassWord("admin","admin");
+	  String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 
+		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
+		loginPageM.addUserNamePassWord(userName, password);
+		 //loginPageM.addUserNamePassWord("admin","admin");
 		 home=loginPageM.clickSignIn();
 		 home.ClickOnAdminIcon();
-		 login=home.clickOnLogout();
 	  String expected= "Login | 7rmart supermarket";
 	  String actual=driver.getTitle();
 	  boolean isManageNewsDisplayed=home.ismanageNewsDisplayed();

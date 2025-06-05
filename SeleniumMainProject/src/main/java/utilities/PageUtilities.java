@@ -32,7 +32,6 @@ public class PageUtilities
 	{
 		JavascriptExecutor scriptExecuter=(JavascriptExecutor) driver;
 		scriptExecuter.executeScript("window.scrollBy(0,1000)", "");
-	
 	}
 	
 	public void actionDoubleClick()

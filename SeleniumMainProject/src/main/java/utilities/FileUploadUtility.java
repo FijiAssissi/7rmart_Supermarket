@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
+import org.apache.poi.hpsf.Constants;
 import org.openqa.selenium.WebElement;
 
 public class FileUploadUtility 
@@ -13,6 +14,7 @@ public class FileUploadUtility
 	public void sendKeysForFileUplad(WebElement element, String path)
 	{
 		element.sendKeys(path);
+		
 	}
 	
 	public void robotClassForFileUpload(WebElement element, String path) throws AWTException

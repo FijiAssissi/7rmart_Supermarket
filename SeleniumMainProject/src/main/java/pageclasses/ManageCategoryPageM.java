@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import constant.Constants;
 import utilities.FileUploadUtility;
 import utilities.PageUtilities;
 import utilities.WaitUtilities;
@@ -36,7 +37,9 @@ public class ManageCategoryPageM
 	
 	@FindBy(xpath = "//input[@type='file']") WebElement manageCategoryChooseFileIcon;
 	@FindBy(xpath="//button[@type='submit']") WebElement manageCategorySaveBtn;
+	
 	//@FindBy(xpath="//button[@type='submit' and @name='create']") WebElement manageCategorySaveBtn;
+ @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement successAlert;
 	
 	/*
 	public void manageCategoryMoreInforClick()
@@ -52,7 +55,7 @@ public class ManageCategoryPageM
 	}
 	public ManageCategoryPageM addCategoryNmae()
 	{
-		CategoryName.sendKeys("Books");
+		CategoryName.sendKeys("BooksABC");
 		return this;
 	}
 	public ManageCategoryPageM clickOnDiscount()
@@ -71,20 +74,8 @@ public class ManageCategoryPageM
 	public ManageCategoryPageM addCategoryImage() throws AWTException
 	{
 		wait.waitForvisibility(driver, manageCategoryChooseFileIcon);
-		fileUpload.sendKeysForFileUplad(manageCategoryChooseFileIcon, "C:\\Users\\jerri\\Downloads\\books.jpg");//used fileupload class object
-		/*written this code in the page utility class
-		//manageCategoryChooseFileIcon.click();
-		manageCategoryChooseFileIcon.sendKeys("C:\\Users\\jerri\\Downloads\\books.jpg");
-		*/
-		/*
-		StringSelection selection=new StringSelection("C:\\Users\\jerri\\Downloads\\books.jpg");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
-		Robot robot=new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		*/
+		fileUpload.sendKeysForFileUplad(manageCategoryChooseFileIcon, Constants.BOOKSIMAGEPATH);
+		
 		return this;
 	}
 	public ManageCategoryPageM clickOnSaveBtn()
@@ -94,13 +85,14 @@ public class ManageCategoryPageM
 		JavascriptExecutor scriptExecuter=(JavascriptExecutor) driver;
 		scriptExecuter.executeScript("window.scrollBy(0,2000)", "");
 		wait.waitForElementToClick(driver, manageCategorySaveBtn);
+		scriptExecuter.executeScript("arguments[0].click();", manageCategorySaveBtn);
 		manageCategorySaveBtn.click();
 		return this;
 	}
 	
-	public boolean isCategoryNameAdded()
+	public boolean isSuccessAlertDisplayed()
 	{
-		return CategoryName.isDisplayed();
+		return successAlert.isDisplayed();
 	}
 	
 }
