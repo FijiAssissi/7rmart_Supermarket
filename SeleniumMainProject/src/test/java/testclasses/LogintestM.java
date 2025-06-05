@@ -20,7 +20,7 @@ public class LogintestM extends BaseM //extends base class which has @before met
 	@Test
 	public void verifyLoginUserpasswdtest1() throws IOException {
 		LoginPageM loginPageM = new LoginPageM(driver);
-		String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");
+		String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 
 		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
 		loginPageM.addUserNamePassWord(userName, password);
 		//loginPageM.clickSignIn();
@@ -30,11 +30,13 @@ public class LogintestM extends BaseM //extends base class which has @before met
 		Assert.assertTrue(dashBoardIsLoaded, Constants.ERRORMESSAGEFORLOGIN);
 
 	}
-
-	public void verifyLoginUserpasswdtest2() // Correct Username and wrong password
+@Test
+	public void verifyLoginUserpasswdtest2() throws IOException 
 	{
 		LoginPageM loginPageM = new LoginPageM(driver);
-		loginPageM.addUserNamePassWord("admin", "adminh");
+		String userName= ExcelUtitlities.readStringData(2, 0, "LoginPageTest");
+		String password=ExcelUtitlities.readStringData(2, 1, "LoginPageTest");
+		loginPageM.addUserNamePassWord(userName,password );
 		//loginPageM.clickSignIn();
 		home=loginPageM.clickSignIn();
 		boolean loginAlertisDisplayed = loginPageM.isAlertDisplayed();
