@@ -19,7 +19,7 @@ public class BaseM
 	  driver.get("https://groceryapp.uniqassosiates.com/admin");
 	  driver.manage().window().maximize();
 	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	  System.out.println(driver.getTitle());
+	  //System.out.println(driver.getTitle());
   }
 
   @AfterMethod

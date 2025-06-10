@@ -23,7 +23,7 @@ public class LogintestM extends BaseM //extends base class which has @before met
 		String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 
 		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
 		loginPageM.addUserNamePassWord(userName, password);
-		//loginPageM.clickSignIn();
+		//loginPageM.clickSignIn(); 
 		home=loginPageM.clickSignIn();//return the successful login page and storing it in the home variable
 		boolean dashBoardIsLoaded = loginPageM.isDashboardDisplayed();
 		System.out.println(dashBoardIsLoaded);

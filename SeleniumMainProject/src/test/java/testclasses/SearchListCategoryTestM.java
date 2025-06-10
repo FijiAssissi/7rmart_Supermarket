@@ -26,12 +26,11 @@ public class SearchListCategoryTestM extends BaseM
 		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
 		loginPageM.addUserNamePassWord(userName, password);
 		 home=loginPageM.clickSignIn(); 
-		 home.manageCategoryMoreInforClick();
-		 SearchListCategoriesPageM searchListCategory=new SearchListCategoriesPageM(driver);
-		 searchCategory=searchListCategory.clickOnSearchIcon().addCategoryName().ClickOnSearchBtn();//storing the result in to searchcategory
-		 boolean failSearch=searchCategory.isfailAlertDisplayed();//if the result is fail,ie the error message alert is displayed
-		 
-		 Assert.assertTrue(failSearch, Constants.ERRORMESSAGEFORSEARCHCATEGORY);
+		searchCategory= home.manageCategoryMoreInforClickSearch();
+		// SearchListCategoriesPageM searchListCategory=new SearchListCategoriesPageM(driver);
+		searchCategory .clickOnSearchIcon().addCategoryName().ClickOnSearchBtn();//storing the result in to searchcategory
+		boolean searchBooksSuccess=searchCategory.isBooksSearchDisplayed();
+		 Assert.assertTrue(searchBooksSuccess, Constants.ERRORMESSAGE);
 		 
   }
 }

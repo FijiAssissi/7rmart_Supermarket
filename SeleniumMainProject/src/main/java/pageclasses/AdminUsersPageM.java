@@ -30,6 +30,8 @@ import utilities.WaitUtilities;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertSuccess;
 //	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement alertFail;
 	
+	@FindBy (xpath="//a[@onclick='click_button(2)']") WebElement searchIcon;
+	
 	
 	public AdminUsersPageM NewAdminUserclick()//it is not going to any other pages, same page
 	{
@@ -38,7 +40,7 @@ import utilities.WaitUtilities;
 	}
 	public AdminUsersPageM addAdminUserInfor()
 	{
-		usernameTextField.sendKeys("FFABC11234");
+		usernameTextField.sendKeys("FFFA");
 		passWordTextField.sendKeys("112233");
 		return this;
 	}
@@ -47,6 +49,7 @@ import utilities.WaitUtilities;
 		//UserTypeDropDown.click();	
 		//Select select=new Select(UserTypeDropDown);
 		//select.selectByVisibleText("Staff");
+		//select class is in the utility package>pageutilty class, so we are creating the object to use the methods
 		pageUtility.selectByVisibleText(UserTypeDropDown, "Staff");
 		return this;
 	}
@@ -57,6 +60,13 @@ import utilities.WaitUtilities;
 		return this;
 		
 	}
+	public AdminUsersPageM clickOnsearch()
+	 {
+		 waitutility.waitForElementToClick(driver, searchIcon);//using waitutilityobject calling methods in that class
+		 searchIcon.click();
+		 return new AdminUsersPageM(driver);
+	 }
+	
 	public boolean isAlertSuccessDisplayed()
 	{
 	return alertSuccess.isDisplayed();	

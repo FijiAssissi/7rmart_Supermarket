@@ -55,7 +55,7 @@ public class ManageCategoryPageM
 	}
 	public ManageCategoryPageM addCategoryNmae()
 	{
-		CategoryName.sendKeys("BooksABC");
+		CategoryName.sendKeys("BooksABCDEF");
 		return this;
 	}
 	public ManageCategoryPageM clickOnDiscount()

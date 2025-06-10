@@ -6,18 +6,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtilities;
 import utilities.WaitUtilities;
 
-public class SearchAdminUsers 
+public class SearchAdminUsersPageM 
 {
 	public WebDriver driver;
 	WaitUtilities waitutility=new WaitUtilities();
-	public SearchAdminUsers(WebDriver driver)
+	PageUtilities pageUtility= new PageUtilities();
+	public SearchAdminUsersPageM(WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
- @FindBy (xpath="//a[@onclick='click_button(2)']") WebElement searchIcon;
+ //@FindBy (xpath="//a[@onclick='click_button(2)']") WebElement searchIcon;
  @FindBy(xpath="//input[@id='un']")WebElement userNameSearch;
  @FindBy(xpath="//select[@id='ut']")WebElement UserTypeSearch;
  @FindBy(xpath="//button[@name='Search']")WebElement searchBtn;
@@ -26,24 +28,27 @@ public class SearchAdminUsers
  /*
  @FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[2]")WebElement searchResultUserType;
  */
- public SearchAdminUsers clickOnsearch()
+ @FindBy (xpath="//a[@onclick='click_button(2)']") WebElement searchIcon;
+ 
+ public SearchAdminUsersPageM clickOnsearch()
  {
 	 waitutility.waitForElementToClick(driver, searchIcon);//using waitutilityobject calling methods in that class
 	 searchIcon.click();
-	 return this;
+	 return new SearchAdminUsersPageM(driver);
  }
- public SearchAdminUsers addSearchDetails()
+ 
+ public SearchAdminUsersPageM addSearchDetails()
  {
-	waitutility.waitForElementToSelect(driver, userNameSearch);
 	userNameSearch.sendKeys("FF1234"); 
-	Select select= new Select(UserTypeSearch);
-	select.selectByVisibleText("Staff");
-	return this;
+	//Select select= new Select(UserTypeSearch);
+	//select.selectByVisibleText("Staff");
+	pageUtility.selectByVisibleText(UserTypeSearch, "Staff");//instead of using select class , we use page utility class and its methods
+	return new SearchAdminUsersPageM(driver);
  }
- public SearchAdminUsers searchSubmit()
+ public SearchAdminUsersPageM searchSubmit()
  {
 	 searchBtn.click();
-	 return this;
+	 return new SearchAdminUsersPageM(driver);
  }
  public boolean searchResultDisplayed()
  {

@@ -15,6 +15,7 @@ import utilities.ExcelUtitlities;
 
 public class AdminUsersTestM extends BaseM
 {
+	LoginPageM login;
 	HomepageM home;
 	AdminUsersPageM adminUsers;
 	
@@ -35,11 +36,12 @@ public class AdminUsersTestM extends BaseM
 		LoginPageM loginPageM=new LoginPageM(driver);
 		String userName= ExcelUtitlities.readStringData(1, 0, "LoginPageTest");
 		String password=ExcelUtitlities.readStringData(1, 1, "LoginPageTest");
-		loginPageM.addUserNamePassWord(userName,password );//calling from excel 
+		
+	login=	loginPageM.addUserNamePassWord(userName,password );//calling from excel 
 		 //loginPageM.addUserNamePassWord("admin","admin");//not using hardcoded login details
-		 home=loginPageM.clickSignIn();   
-		 adminUsers=home.adminUsersMoreInfoClick();
-		 adminUsers.NewAdminUserclick().addAdminUserInfor().UserTypeDropDown().clickOnSave();
+		 home=login.clickSignIn();   
+		 adminUsers=home.adminUsersMoreInfoClickNew();
+		adminUsers= adminUsers.NewAdminUserclick().addAdminUserInfor().UserTypeDropDown().clickOnSave();
 	boolean alertsuccessisDisplayed=adminUsers.isAlertSuccessDisplayed();
 	Assert.assertTrue(alertsuccessisDisplayed, "Error");
 	
