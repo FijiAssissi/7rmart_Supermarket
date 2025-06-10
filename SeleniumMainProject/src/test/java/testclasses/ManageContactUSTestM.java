@@ -27,9 +27,9 @@ public class ManageContactUSTestM extends BaseM
 		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
 		loginPageM.addUserNamePassWord(userName, password);
 		 home=loginPageM.clickSignIn(); 
-		 home.manageContactMoreInfo();
-		 ManageContactPageM manageContactUs=new ManageContactPageM(driver);
-		 manageContactUs.manageContactActionBtn().manageContactAddPhone().manageContactAddEmail().manageContactAddAddress().manageContactAddDeliveryTime().manageContactAddDeleiveryCharge().manageContactClickOnUpdate();
+	manageContactUs=home.manageContactMoreInfo();
+		 //ManageContactPageM manageContactUs=new ManageContactPageM(driver); here we are not using driver again instead using chaining
+		manageContactUs= manageContactUs.manageContactActionBtn().manageContactAddPhone().manageContactAddEmail().manageContactAddAddress().manageContactAddDeliveryTime().manageContactAddDeleiveryCharge().manageContactClickOnUpdate();
 		 boolean SuccessAlertDisplay=manageContactUs.isSuccessAlertDisplayed();
 	Assert.assertTrue(SuccessAlertDisplay, Constants.ERRORMESSAGE);
   }

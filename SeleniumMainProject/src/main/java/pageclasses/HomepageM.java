@@ -34,11 +34,17 @@ public class HomepageM
 		logout.click();
 		return new LoginPageM(driver);
 	}
-	public AdminUsersPageM adminUsersMoreInfoClick()//here after clicking the admin users moreinfo, it is going to admin page
+	public AdminUsersPageM adminUsersMoreInfoClickNew()//here after clicking the admin users moreinfo, it is going to admin pagefor creating NEW admin
 	{
 		//waitutility.waitForElementToClick(driver, adminMoreInfo);
 		adminMoreInfo.click();
 		return new AdminUsersPageM(driver);
+	}
+	public SearchAdminUsersPageM adminUsersMoreInfoClickSearch()//here after clicking the admin users moreinfo, it is going to admin page for searching admins
+	{
+		//waitutility.waitForElementToClick(driver, adminMoreInfo);
+		adminMoreInfo.click();
+		return new SearchAdminUsersPageM(driver);
 	}
 	public ManageNewsPageM manageNewsmoreInfoClick()
 	{
@@ -49,10 +55,17 @@ public class HomepageM
 	{
 		return manageNewsMoreInfo.isDisplayed();
 	}
-	public ManageCategoryPageM manageCategoryMoreInforClick()
+	
+	public ManageCategoryPageM manageCategoryMoreInforClickNew()//taking to the new ManageCategory page
 	{
 		manageCategoryMoreInfo.click();
 		return new ManageCategoryPageM(driver);
+	}
+	
+	public SearchListCategoriesPageM manageCategoryMoreInforClickSearch()//taking to the search page
+	{
+		manageCategoryMoreInfo.click();
+		return new SearchListCategoriesPageM(driver);
 	}
 	public ManageContactPageM manageContactMoreInfo()
 	{

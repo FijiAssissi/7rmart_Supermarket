@@ -25,10 +25,10 @@ public class ManageFooterTestM extends BaseM
 		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
 		loginPageM.addUserNamePassWord(userName, password);
 		 home=loginPageM.clickSignIn(); 
-		 home.manageFooterMoreInfoClick();
-		 ManageFooterTextpageM manageFooterobj=new ManageFooterTextpageM(driver);
-		 manageFooterobj.clickOnActionBtn().addAddress().addEmail().addphone().clickOnUpdateBtn();
-		 boolean isSuccessAlertDisplayed= manageFooterobj.isAlertDisplayed();
+		 manageFooter=  home.manageFooterMoreInfoClick();
+		 //ManageFooterTextpageM manageFooterobj=new ManageFooterTextpageM(driver);
+		 manageFooter.clickOnActionBtn().addAddress().addEmail().addphone().clickOnUpdateBtn();
+		 boolean isSuccessAlertDisplayed= manageFooter.isAlertDisplayed();
 		 Assert.assertTrue(isSuccessAlertDisplayed, Constants.ERRORMESSAGE);
   }
 }

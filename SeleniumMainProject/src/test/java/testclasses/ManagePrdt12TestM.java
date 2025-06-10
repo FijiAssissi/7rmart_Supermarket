@@ -24,12 +24,12 @@ public class ManagePrdt12TestM extends BaseM
 		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
 		loginPageM.addUserNamePassWord(userName, password);
 		 home=loginPageM.clickSignIn(); 
-		 home.managePrdt12MoreInoClick();
-		 ManageProduct12PageM managePrdt12obj=new ManageProduct12PageM(driver);
-		 managePrdt12obj.managePrdt12NewIconClick().addTitle().selectPrdtType()
+		managePrdt12= home.managePrdt12MoreInoClick();
+		 //ManageProduct12PageM managePrdt12obj=new ManageProduct12PageM(driver);
+		 managePrdt12.managePrdt12NewIconClick().addTitle().selectPrdtType()
 		 .selectCategory().selectSubCategory().addWeightValue()
 		 .addWeightUnitdropDown().addMaxQuantity().addPrice().addStockAvailability().addImage().clickOnSaveBtn();
-		boolean alertDisplay=managePrdt12obj.isAlertDisplayed();
+		boolean alertDisplay=managePrdt12.isAlertDisplayed();
 		Assert.assertTrue(alertDisplay, Constants.ERRORMESSAGE);
   }
 }

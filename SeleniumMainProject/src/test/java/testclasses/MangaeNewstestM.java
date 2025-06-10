@@ -26,12 +26,12 @@ public class MangaeNewstestM extends BaseM
 		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
 		loginPageM.addUserNamePassWord(userName, password);
 		 home=loginPageM.clickSignIn();
-		 home.manageNewsmoreInfoClick();
-		 ManageNewsPageM managenewsobj=new ManageNewsPageM(driver);
-		 manageNews=managenewsobj.mangeNewsNewIcon();
-		 manageNews.enterNewsInfo().clickOnSaveBtn();
-		 boolean manageNewsNewIconDisplayed= managenewsobj.mangenewsNewIconEnabled();
-		 boolean successAlert=managenewsobj.newsCreatedAlert();
+		 manageNews=home.manageNewsmoreInfoClick();
+		// ManageNewsPageM managenewsobj=new ManageNewsPageM(driver);
+		manageNews.mangeNewsNewIcon().enterNewsInfo().clickOnSaveBtn();
+		 
+		 boolean manageNewsNewIconDisplayed= manageNews.mangenewsNewIconEnabled();
+		 boolean successAlert=manageNews.newsCreatedAlert();
 		 Assert.assertTrue(manageNewsNewIconDisplayed, Constants.ERRORMESSAGEFORMANAGEMOREINFO);
 		 Assert.assertTrue(successAlert, Constants.ERRORMESSAGE);
 	

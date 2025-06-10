@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testclasses.HomePageTestM">
+      <class name="testclasses.SearchAdminUsersTestM">
         <methods>
           <include name="afterMethod"/>
+          <include name="searchAdminUSers"/>
           <include name="beforeMethod"/>
-          <include name="ClickOnAdmin"/>
         </methods>
-      </class> <!-- testclasses.HomePageTestM -->
+      </class> <!-- testclasses.SearchAdminUsersTestM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
