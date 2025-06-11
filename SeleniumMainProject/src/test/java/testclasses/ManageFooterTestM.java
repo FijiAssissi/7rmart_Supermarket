@@ -18,7 +18,7 @@ public class ManageFooterTestM extends BaseM
 	HomepageM home;
 	ManageFooterTextpageM manageFooter;
   @Test
-  public void manageFooter() throws IOException 
+  public void verifyManageFooter() throws IOException 
   {
 	  LoginPageM loginPageM=new LoginPageM(driver);
 	  String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 

@@ -12,6 +12,7 @@ import pageclasses.LoginPageM;
 import pageclasses.ManageCategoryPageM;
 import pageclasses.ManageNewsPageM;
 import utilities.ExcelUtitlities;
+import utilities.FakeUtility;
 
 public class ManageCategoryTestM extends BaseM 
 {
@@ -20,8 +21,9 @@ public class ManageCategoryTestM extends BaseM
 	ManageCategoryPageM manageCategory;
 	//AdminUsersPageM adminUsers;
 	//ManageNewsPageM manageNews;
+	FakeUtility fakeData=new FakeUtility();
   @Test
-  public void manageCategory() throws  IOException, AWTException 
+  public void verifyManageCategory() throws  IOException, AWTException 
   {
 	  LoginPageM loginPageM=new LoginPageM(driver);
 	  String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 
@@ -30,7 +32,8 @@ public class ManageCategoryTestM extends BaseM
 		home=loginPageM.clickSignIn();
 		//ManageCategoryPageM manageCategoryobj=new ManageCategoryPageM(driver);
 	manageCategory=	home.manageCategoryMoreInforClickNew();
-		manageCategory.categoryNewIconClick().addCategoryNmae().clickOnDiscount().addCategoryImage().clickOnSaveBtn();
+	String categoryNameFake=fakeData.getFakeCategoryNameBook();
+ manageCategory.categoryNewIconClick().addCategoryName(categoryNameFake).clickOnDiscount().addCategoryImage().clickOnSaveBtn();
 		boolean successAlert=manageCategory.isSuccessAlertDisplayed();
 		Assert.assertTrue(successAlert, Constants.ERRORMESSAGE);
   }

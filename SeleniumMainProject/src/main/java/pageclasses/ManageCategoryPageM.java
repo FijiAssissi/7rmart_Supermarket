@@ -53,9 +53,10 @@ public class ManageCategoryPageM
 		manageCategoryNewIcon.click();
 		return this;
 	}
-	public ManageCategoryPageM addCategoryNmae()
+	public ManageCategoryPageM addCategoryName(String categoryName)//here each time we need new category name so we can use fake data
 	{
-		CategoryName.sendKeys("BooksABCDEF");
+		//CategoryName.sendKeys("BooksABCDEF");
+		CategoryName.sendKeys(categoryName);//passing as parameter
 		return this;
 	}
 	public ManageCategoryPageM clickOnDiscount()
