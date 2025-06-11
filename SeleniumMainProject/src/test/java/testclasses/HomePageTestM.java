@@ -16,7 +16,7 @@ public class HomePageTestM extends BaseM
 	LoginPageM login;
 	HomepageM home;
   @Test
-  public void ClickOnAdmin() throws IOException 
+  public void verifyHomePage() throws IOException 
   {
 	  /*
 	  	LoginPageM loginPageM=new LoginPageM(driver);

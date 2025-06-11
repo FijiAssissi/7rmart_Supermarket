@@ -38,10 +38,13 @@ import utilities.WaitUtilities;
 		newAdminIcon.click();
 		return this;
 	}
-	public AdminUsersPageM addAdminUserInfor()
+	public AdminUsersPageM addAdminUserInfor(String userName, String password)//here everytime we need new data, so we use fakeutiltiy class
 	{
-		usernameTextField.sendKeys("FFFA");
-		passWordTextField.sendKeys("112233");
+		//instead of using usernameTextField.sendkeys("admin123") 
+		//passwordTextField.sendKeys("admin11")
+		//passing parameter
+		usernameTextField.sendKeys(userName);
+		passWordTextField.sendKeys(password);
 		return this;
 	}
 	public AdminUsersPageM UserTypeDropDown()

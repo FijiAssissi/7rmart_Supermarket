@@ -17,7 +17,7 @@ public class ManagePrdt12TestM extends BaseM
 	HomepageM home;
 	ManageProduct12PageM managePrdt12;
   @Test
-  public void manageprdt12() throws IOException 
+  public void verifyManageprdt12() throws IOException 
   {
 	  LoginPageM loginPageM=new LoginPageM(driver);
 	  String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 

@@ -20,7 +20,7 @@ public class ManageContactUSTestM extends BaseM
 	ManageNewsPageM manageCategory;
 	ManageContactPageM manageContactUs;
   @Test
-  public void manageContactUs() throws IOException 
+  public void verifyManageContactUs() throws IOException 
   {
 	  LoginPageM loginPageM=new LoginPageM(driver);
 	  String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 

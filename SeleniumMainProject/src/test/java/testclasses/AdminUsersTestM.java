@@ -12,15 +12,17 @@ import pageclasses.AdminUsersPageM;
 import pageclasses.HomepageM;
 import pageclasses.LoginPageM;
 import utilities.ExcelUtitlities;
+import utilities.FakeUtility;
 
 public class AdminUsersTestM extends BaseM
 {
 	LoginPageM login;
 	HomepageM home;
 	AdminUsersPageM adminUsers;
+	FakeUtility fakedata=new FakeUtility();
 	
   @Test
-  public void adminUsersTest() throws IOException 
+  public void verifyAdminUsersTest() throws IOException 
   {
 	  /*
 	  	LoginPageM loginPageM=new LoginPageM(driver);
@@ -41,7 +43,10 @@ public class AdminUsersTestM extends BaseM
 		 //loginPageM.addUserNamePassWord("admin","admin");//not using hardcoded login details
 		 home=login.clickSignIn();   
 		 adminUsers=home.adminUsersMoreInfoClickNew();
-		adminUsers= adminUsers.NewAdminUserclick().addAdminUserInfor().UserTypeDropDown().clickOnSave();
+		 //here we use fakeutitlity class to generate new data each time
+		 String userNameAd=fakedata.getFakeFirstName();
+		 String passwordAd=fakedata.getPassword();
+		adminUsers= adminUsers.NewAdminUserclick().addAdminUserInfor(userNameAd, passwordAd).UserTypeDropDown().clickOnSave();
 	boolean alertsuccessisDisplayed=adminUsers.isAlertSuccessDisplayed();
 	Assert.assertTrue(alertsuccessisDisplayed, "Error");
 	
