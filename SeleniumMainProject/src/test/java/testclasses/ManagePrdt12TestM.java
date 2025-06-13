@@ -16,7 +16,7 @@ public class ManagePrdt12TestM extends BaseM
 	LoginPageM login;
 	HomepageM home;
 	ManageProduct12PageM managePrdt12;
-  @Test
+  @Test 
   public void verifyManageprdt12() throws IOException 
   {
 	  LoginPageM loginPageM=new LoginPageM(driver);

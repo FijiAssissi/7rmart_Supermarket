@@ -13,4 +13,5 @@ public class Constants
 	
 	public static final String TESTDATAFILE=System.getProperty("user.dir")+"//src//main//resources//TestData.xlsx";
 	public static final String BOOKSIMAGEPATH=System.getProperty("user.dir")+"//src//main//resources//books.png";
+	public static final String CONFIGFILE=System.getProperty("user.dir")+"//src//test//resources//config.properties";
 }

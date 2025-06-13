@@ -10,8 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-public class ScreenShot
-{
+public class ScreenShot {
 	public void captureFailureScreenShot(WebDriver driver, String name) throws IOException {
 		// Interface & method for Capture Screenshot
 		TakesScreenshot scrShot = (TakesScreenshot) driver;
@@ -23,7 +22,7 @@ public class ScreenShot
 		}
 
 		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date(0));// date time capture using
-File finalDestination = new File(
+		File finalDestination = new File(
 				System.getProperty("user.dir") + "\\OutputScreenshots\\" + name + "_" + timeStamp + ".png");
 		FileHandler.copy(screenShot, finalDestination);// copy screenshot from temp path to project folder
 	}
