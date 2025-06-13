@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-11T11:52:19 EDT" name="Default suite" finished-at="2025-06-11T11:52:31 EDT" duration-ms="12069">
+  <suite started-at="2025-06-13T10:26:17 EDT" name="CrossBrowser" finished-at="2025-06-13T10:26:50 EDT" duration-ms="33215">
     <groups>
     </groups>
-    <test started-at="2025-06-11T11:52:19 EDT" name="Default test" finished-at="2025-06-11T11:52:31 EDT" duration-ms="12069">
+    <test started-at="2025-06-13T10:26:17 EDT" name="chromeTest" finished-at="2025-06-13T10:26:29 EDT" duration-ms="12400">
       <class name="testclasses.ManageCategoryTestM">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testclasses.ManageCategoryTestM@55141def]" started-at="2025-06-11T11:52:19 EDT" name="beforeMethod" finished-at="2025-06-11T11:52:24 EDT" duration-ms="5168" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.ManageCategoryTestM@d23e042]" started-at="2025-06-13T10:26:17 EDT" name="beforeMethod" finished-at="2025-06-13T10:26:22 EDT" duration-ms="5153" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@55141def]" started-at="2025-06-11T11:52:24 EDT" name="verifyManageCategory" finished-at="2025-06-11T11:52:31 EDT" duration-ms="6765" status="FAIL">
+        <test-method signature="verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@d23e042]" started-at="2025-06-13T10:26:22 EDT" name="verifyManageCategory" finished-at="2025-06-13T10:26:29 EDT" duration-ms="7038" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
               <![CDATA[element click intercepted: Element is not clickable at point (334, 792)
@@ -19,10 +26,10 @@
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1b7d1307e1062b49d32f4589f9023e23, clickElement {id=f.D8D71774259D1B1C214243138554B95F.d.A67409C17E6C0D6B4AC1FF45895228E8.e.113}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65350}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65350/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1b7d1307e1062b49d32f4589f9023e23)] -> xpath: //button[@type='submit']]
-Session ID: 1b7d1307e1062b49d32f4589f9023e23]]>
+Command: [fe2de2d9efb3cd1061691957cb6cff3e, clickElement {id=f.AB516199B84799C805CF3F59F3C497CE.d.448DE2256830BCDD4792AD18FC21384A.e.113}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55973}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55973/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fe2de2d9efb3cd1061691957cb6cff3e)] -> xpath: //button[@type='submit']]
+Session ID: fe2de2d9efb3cd1061691957cb6cff3e]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (334, 792)
@@ -30,10 +37,10 @@ Session ID: 1b7d1307e1062b49d32f4589f9023e23]]>
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1b7d1307e1062b49d32f4589f9023e23, clickElement {id=f.D8D71774259D1B1C214243138554B95F.d.A67409C17E6C0D6B4AC1FF45895228E8.e.113}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65350}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65350/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1b7d1307e1062b49d32f4589f9023e23)] -> xpath: //button[@type='submit']]
-Session ID: 1b7d1307e1062b49d32f4589f9023e23
+Command: [fe2de2d9efb3cd1061691957cb6cff3e, clickElement {id=f.AB516199B84799C805CF3F59F3C497CE.d.448DE2256830BCDD4792AD18FC21384A.e.113}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55973}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55973/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fe2de2d9efb3cd1061691957cb6cff3e)] -> xpath: //button[@type='submit']]
+Session ID: fe2de2d9efb3cd1061691957cb6cff3e
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -49,7 +56,7 @@ at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
 at pageclasses.ManageCategoryPageM.clickOnSaveBtn(ManageCategoryPageM.java:90)
 at testclasses.ManageCategoryTestM.verifyManageCategory(ManageCategoryTestM.java:36)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -84,11 +91,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyManageCategory -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.ManageCategoryTestM@55141def]" started-at="2025-06-11T11:52:31 EDT" name="afterMethod" finished-at="2025-06-11T11:52:31 EDT" duration-ms="93" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.ManageCategoryTestM@d23e042]" started-at="2025-06-13T10:26:29 EDT" name="afterMethod" finished-at="2025-06-13T10:26:29 EDT" duration-ms="148" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyManageCategory status=FAILURE method=ManageCategoryTestM.verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@55141def] output={null}]]]>
+                <![CDATA[[TestResult name=verifyManageCategory status=FAILURE method=ManageCategoryTestM.verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@d23e042] output={null}]]]>
               </value>
             </param>
           </params>
@@ -96,6 +103,135 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- testclasses.ManageCategoryTestM -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- chromeTest -->
+    <test started-at="2025-06-13T10:26:30 EDT" name="edgeTest" finished-at="2025-06-13T10:26:41 EDT" duration-ms="11706">
+      <class name="testclasses.ManageCategoryTestM">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.ManageCategoryTestM@34129c78]" started-at="2025-06-13T10:26:30 EDT" name="beforeMethod" finished-at="2025-06-13T10:26:35 EDT" duration-ms="5762" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@34129c78]" started-at="2025-06-13T10:26:35 EDT" name="verifyManageCategory" finished-at="2025-06-13T10:26:41 EDT" duration-ms="5863" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element is not clickable at point (334, 792)
+  (Session info: MicrosoftEdge=137.0.3296.68)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [f7b7329ebf95354cd41533f23a1e314a, clickElement {id=f.DB94C4BFB217CFB9E2979C00E19EE306.d.414AD3C7D72003BE998C471346D1E488.e.6783}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 137.0.3296.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56016}, msedge: {msedgedriverVersion: 137.0.3296.68 (f3affdcf267b..., userDataDir: C:\Users\jerri\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56016/devtoo..., se:cdpVersion: 137.0.3296.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (f7b7329ebf95354cd41533f23a1e314a)] -> xpath: //button[@type='submit']]
+Session ID: f7b7329ebf95354cd41533f23a1e314a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (334, 792)
+  (Session info: MicrosoftEdge=137.0.3296.68)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [f7b7329ebf95354cd41533f23a1e314a, clickElement {id=f.DB94C4BFB217CFB9E2979C00E19EE306.d.414AD3C7D72003BE998C471346D1E488.e.6783}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 137.0.3296.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56016}, msedge: {msedgedriverVersion: 137.0.3296.68 (f3affdcf267b..., userDataDir: C:\Users\jerri\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56016/devtoo..., se:cdpVersion: 137.0.3296.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (f7b7329ebf95354cd41533f23a1e314a)] -> xpath: //button[@type='submit']]
+Session ID: f7b7329ebf95354cd41533f23a1e314a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at pageclasses.ManageCategoryPageM.clickOnSaveBtn(ManageCategoryPageM.java:90)
+at testclasses.ManageCategoryTestM.verifyManageCategory(ManageCategoryTestM.java:36)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyManageCategory -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.ManageCategoryTestM@34129c78]" started-at="2025-06-13T10:26:41 EDT" name="afterMethod" finished-at="2025-06-13T10:26:41 EDT" duration-ms="73" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyManageCategory status=FAILURE method=ManageCategoryTestM.verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@34129c78] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testclasses.ManageCategoryTestM -->
+    </test> <!-- edgeTest -->
+    <test started-at="2025-06-13T10:26:41 EDT" name="firefoxTest" finished-at="2025-06-13T10:26:50 EDT" duration-ms="8516">
+      <class name="testclasses.HomePageTestM">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.HomePageTestM@4c2bb6e0]" started-at="2025-06-13T10:26:41 EDT" name="beforeMethod" finished-at="2025-06-13T10:26:48 EDT" duration-ms="7048" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyHomePage()[pri:0, instance:testclasses.HomePageTestM@4c2bb6e0]" started-at="2025-06-13T10:26:48 EDT" name="verifyHomePage" finished-at="2025-06-13T10:26:50 EDT" duration-ms="1463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.HomePageTestM@4c2bb6e0]" started-at="2025-06-13T10:26:50 EDT" name="afterMethod" finished-at="2025-06-13T10:26:50 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHomePage status=SUCCESS method=HomePageTestM.verifyHomePage()[pri:0, instance:testclasses.HomePageTestM@4c2bb6e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testclasses.HomePageTestM -->
+    </test> <!-- firefoxTest -->
+  </suite> <!-- CrossBrowser -->
 </testng-results>

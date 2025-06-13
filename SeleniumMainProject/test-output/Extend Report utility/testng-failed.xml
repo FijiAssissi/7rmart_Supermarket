@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="ExtendReportUtility(failed)">
     <classes>
-      <class name="testclasses.AdminUsersTestM">
+      <class name="testclasses.SearchAdminUsersTestM">
         <methods>
           <include name="afterMethod"/>
+          <include name="searchAdminUSers"/>
           <include name="beforeMethod"/>
-          <include name="adminUsersTest"/>
         </methods>
-      </class> <!-- testclasses.AdminUsersTestM -->
+      </class> <!-- testclasses.SearchAdminUsersTestM -->
     </classes>
   </test> <!-- ExtendReportUtility(failed) -->
 </suite> <!-- Failed suite [Extend Report utility] -->
