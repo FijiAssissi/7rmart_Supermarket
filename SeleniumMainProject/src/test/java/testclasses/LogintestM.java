@@ -17,7 +17,7 @@ public class LogintestM extends BaseM //extends base class which has @before met
 	HomepageM home; //globally declaring 
 	//store the result of the successful login
 	
-	@Test
+	@Test(groups= {"Regression"})
 	public void verifyLoginUserpasswdtest1() throws IOException {
 		LoginPageM loginPageM = new LoginPageM(driver);
 		String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 
@@ -30,7 +30,7 @@ public class LogintestM extends BaseM //extends base class which has @before met
 		Assert.assertTrue(dashBoardIsLoaded, Constants.ERRORMESSAGEFORLOGIN);
 
 	}
-@Test
+@Test(groups= {"Regression"})
 	public void verifyLoginUserpasswdtest2() throws IOException 
 	{
 		LoginPageM loginPageM = new LoginPageM(driver);

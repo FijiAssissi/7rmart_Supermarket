@@ -55,7 +55,7 @@ public class BaseM
   }
   
 
-  @AfterMethod
+  @AfterMethod(alwaysRun = true)
   public void afterMethod(ITestResult itResult) throws IOException 
   {
 	 // driver.quit();

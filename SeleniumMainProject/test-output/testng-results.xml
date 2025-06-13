@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+<testng-results retried="2" ignored="2" total="5" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-13T10:26:17 EDT" name="CrossBrowser" finished-at="2025-06-13T10:26:50 EDT" duration-ms="33215">
+  <suite started-at="2025-06-13T11:15:30 EDT" name="MainProject" finished-at="2025-06-13T11:16:52 EDT" duration-ms="81510">
     <groups>
     </groups>
-    <test started-at="2025-06-13T10:26:17 EDT" name="chromeTest" finished-at="2025-06-13T10:26:29 EDT" duration-ms="12400">
-      <class name="testclasses.ManageCategoryTestM">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.ManageCategoryTestM@d23e042]" started-at="2025-06-13T10:26:17 EDT" name="beforeMethod" finished-at="2025-06-13T10:26:22 EDT" duration-ms="5153" status="PASS">
+    <test started-at="2025-06-13T11:15:30 EDT" name="groceryapp" finished-at="2025-06-13T11:16:52 EDT" duration-ms="81510">
+      <class name="testclasses.ManagePrdt12TestM">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:15:30 EDT" name="beforeMethod" finished-at="2025-06-13T11:15:36 EDT" duration-ms="5684" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,47 +18,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@d23e042]" started-at="2025-06-13T10:26:22 EDT" name="verifyManageCategory" finished-at="2025-06-13T10:26:29 EDT" duration-ms="7038" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method retried="true" signature="verifyManageprdt12()[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:15:36 EDT" name="verifyManageprdt12" finished-at="2025-06-13T11:15:58 EDT" duration-ms="22315" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (334, 792)
-  (Session info: chrome=137.0.7151.103)
+              <![CDATA[Expected condition failed: waiting for element ([[ChromeDriver: chrome on windows (347f1742867cd218870ce44ef2c432df)] -> xpath: //input[@id='main_img']]) to be selected (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fe2de2d9efb3cd1061691957cb6cff3e, clickElement {id=f.AB516199B84799C805CF3F59F3C497CE.d.448DE2256830BCDD4792AD18FC21384A.e.113}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55973}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55973/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (fe2de2d9efb3cd1061691957cb6cff3e)] -> xpath: //button[@type='submit']]
-Session ID: fe2de2d9efb3cd1061691957cb6cff3e]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57770}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57770/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 347f1742867cd218870ce44ef2c432df]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (334, 792)
-  (Session info: chrome=137.0.7151.103)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element ([[ChromeDriver: chrome on windows (347f1742867cd218870ce44ef2c432df)] -> xpath: //input[@id='main_img']]) to be selected (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fe2de2d9efb3cd1061691957cb6cff3e, clickElement {id=f.AB516199B84799C805CF3F59F3C497CE.d.448DE2256830BCDD4792AD18FC21384A.e.113}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55973}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55973/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (fe2de2d9efb3cd1061691957cb6cff3e)] -> xpath: //button[@type='submit']]
-Session ID: fe2de2d9efb3cd1061691957cb6cff3e
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pageclasses.ManageCategoryPageM.clickOnSaveBtn(ManageCategoryPageM.java:90)
-at testclasses.ManageCategoryTestM.verifyManageCategory(ManageCategoryTestM.java:36)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57770}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57770/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 347f1742867cd218870ce44ef2c432df
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.WaitUtilities.waitForElementToSelect(WaitUtilities.java:21)
+at pageclasses.ManageProduct12PageM.addImage(ManageProduct12PageM.java:105)
+at testclasses.ManagePrdt12TestM.verifyManageprdt12(ManagePrdt12TestM.java:31)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -87,83 +68,60 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyManageCategory -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.ManageCategoryTestM@d23e042]" started-at="2025-06-13T10:26:29 EDT" name="afterMethod" finished-at="2025-06-13T10:26:29 EDT" duration-ms="148" status="PASS">
+        </test-method> <!-- verifyManageprdt12 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:15:58 EDT" name="afterMethod" finished-at="2025-06-13T11:15:58 EDT" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyManageCategory status=FAILURE method=ManageCategoryTestM.verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@d23e042] output={null}]]]>
+                <![CDATA[[TestResult name=verifyManageprdt12 status=SKIP method=ManagePrdt12TestM.verifyManageprdt12()[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testclasses.ManageCategoryTestM -->
-    </test> <!-- chromeTest -->
-    <test started-at="2025-06-13T10:26:30 EDT" name="edgeTest" finished-at="2025-06-13T10:26:41 EDT" duration-ms="11706">
-      <class name="testclasses.ManageCategoryTestM">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.ManageCategoryTestM@34129c78]" started-at="2025-06-13T10:26:30 EDT" name="beforeMethod" finished-at="2025-06-13T10:26:35 EDT" duration-ms="5762" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:15:58 EDT" name="beforeMethod" finished-at="2025-06-13T11:16:03 EDT" duration-ms="4728" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@34129c78]" started-at="2025-06-13T10:26:35 EDT" name="verifyManageCategory" finished-at="2025-06-13T10:26:41 EDT" duration-ms="5863" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method retried="true" signature="verifyManageprdt12()[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:16:03 EDT" name="verifyManageprdt12" finished-at="2025-06-13T11:16:26 EDT" duration-ms="23146" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (334, 792)
-  (Session info: MicrosoftEdge=137.0.3296.68)
+              <![CDATA[Expected condition failed: waiting for element ([[ChromeDriver: chrome on windows (cedca9462f32935390fa811d0eb799cf)] -> xpath: //input[@id='main_img']]) to be selected (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [f7b7329ebf95354cd41533f23a1e314a, clickElement {id=f.DB94C4BFB217CFB9E2979C00E19EE306.d.414AD3C7D72003BE998C471346D1E488.e.6783}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 137.0.3296.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56016}, msedge: {msedgedriverVersion: 137.0.3296.68 (f3affdcf267b..., userDataDir: C:\Users\jerri\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56016/devtoo..., se:cdpVersion: 137.0.3296.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (f7b7329ebf95354cd41533f23a1e314a)] -> xpath: //button[@type='submit']]
-Session ID: f7b7329ebf95354cd41533f23a1e314a]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57793}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57793/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cedca9462f32935390fa811d0eb799cf]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (334, 792)
-  (Session info: MicrosoftEdge=137.0.3296.68)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element ([[ChromeDriver: chrome on windows (cedca9462f32935390fa811d0eb799cf)] -> xpath: //input[@id='main_img']]) to be selected (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [f7b7329ebf95354cd41533f23a1e314a, clickElement {id=f.DB94C4BFB217CFB9E2979C00E19EE306.d.414AD3C7D72003BE998C471346D1E488.e.6783}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 137.0.3296.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56016}, msedge: {msedgedriverVersion: 137.0.3296.68 (f3affdcf267b..., userDataDir: C:\Users\jerri\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56016/devtoo..., se:cdpVersion: 137.0.3296.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (f7b7329ebf95354cd41533f23a1e314a)] -> xpath: //button[@type='submit']]
-Session ID: f7b7329ebf95354cd41533f23a1e314a
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pageclasses.ManageCategoryPageM.clickOnSaveBtn(ManageCategoryPageM.java:90)
-at testclasses.ManageCategoryTestM.verifyManageCategory(ManageCategoryTestM.java:36)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57793}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57793/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cedca9462f32935390fa811d0eb799cf
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.WaitUtilities.waitForElementToSelect(WaitUtilities.java:21)
+at pageclasses.ManageProduct12PageM.addImage(ManageProduct12PageM.java:105)
+at testclasses.ManagePrdt12TestM.verifyManageprdt12(ManagePrdt12TestM.java:31)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
@@ -186,52 +144,98 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyManageCategory -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.ManageCategoryTestM@34129c78]" started-at="2025-06-13T10:26:41 EDT" name="afterMethod" finished-at="2025-06-13T10:26:41 EDT" duration-ms="73" status="PASS">
+        </test-method> <!-- verifyManageprdt12 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:16:26 EDT" name="afterMethod" finished-at="2025-06-13T11:16:26 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyManageCategory status=FAILURE method=ManageCategoryTestM.verifyManageCategory()[pri:0, instance:testclasses.ManageCategoryTestM@34129c78] output={null}]]]>
+                <![CDATA[[TestResult name=verifyManageprdt12 status=SKIP method=ManagePrdt12TestM.verifyManageprdt12()[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testclasses.ManageCategoryTestM -->
-    </test> <!-- edgeTest -->
-    <test started-at="2025-06-13T10:26:41 EDT" name="firefoxTest" finished-at="2025-06-13T10:26:50 EDT" duration-ms="8516">
-      <class name="testclasses.HomePageTestM">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.HomePageTestM@4c2bb6e0]" started-at="2025-06-13T10:26:41 EDT" name="beforeMethod" finished-at="2025-06-13T10:26:48 EDT" duration-ms="7048" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:16:26 EDT" name="beforeMethod" finished-at="2025-06-13T11:16:32 EDT" duration-ms="5222" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyHomePage()[pri:0, instance:testclasses.HomePageTestM@4c2bb6e0]" started-at="2025-06-13T10:26:48 EDT" name="verifyHomePage" finished-at="2025-06-13T10:26:50 EDT" duration-ms="1463" status="PASS">
+        <test-method signature="verifyManageprdt12()[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:16:32 EDT" name="verifyManageprdt12" finished-at="2025-06-13T11:16:52 EDT" duration-ms="20243" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element ([[ChromeDriver: chrome on windows (5a126ce1b7a2cb12e10acb627a556831)] -> xpath: //input[@id='main_img']]) to be selected (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57856/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a126ce1b7a2cb12e10acb627a556831]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element ([[ChromeDriver: chrome on windows (5a126ce1b7a2cb12e10acb627a556831)] -> xpath: //input[@id='main_img']]) to be selected (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.103, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\jerri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57856/devtoo..., se:cdpVersion: 137.0.7151.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a126ce1b7a2cb12e10acb627a556831
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.WaitUtilities.waitForElementToSelect(WaitUtilities.java:21)
+at pageclasses.ManageProduct12PageM.addImage(ManageProduct12PageM.java:105)
+at testclasses.ManagePrdt12TestM.verifyManageprdt12(ManagePrdt12TestM.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomePage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.HomePageTestM@4c2bb6e0]" started-at="2025-06-13T10:26:50 EDT" name="afterMethod" finished-at="2025-06-13T10:26:50 EDT" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyManageprdt12 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194]" started-at="2025-06-13T11:16:52 EDT" name="afterMethod" finished-at="2025-06-13T11:16:52 EDT" duration-ms="97" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHomePage status=SUCCESS method=HomePageTestM.verifyHomePage()[pri:0, instance:testclasses.HomePageTestM@4c2bb6e0] output={null}]]]>
+                <![CDATA[[TestResult name=verifyManageprdt12 status=FAILURE method=ManagePrdt12TestM.verifyManageprdt12()[pri:0, instance:testclasses.ManagePrdt12TestM@3270d194] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testclasses.HomePageTestM -->
-    </test> <!-- firefoxTest -->
-  </suite> <!-- CrossBrowser -->
+      </class> <!-- testclasses.ManagePrdt12TestM -->
+    </test> <!-- groceryapp -->
+  </suite> <!-- MainProject -->
 </testng-results>
