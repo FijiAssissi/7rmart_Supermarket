@@ -4,13 +4,13 @@
   <parameter name="browzer" value="chrome"/>
   <test thread-count="5" name="groceryapp(failed)">
     <classes>
-      <class name="testclasses.ManagePrdt12TestM">
+      <class name="testclasses.AdminUsersTestM">
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="verifyManageprdt12"/>
+          <include name="verifyAdminUsersTest"/>
         </methods>
-      </class> <!-- testclasses.ManagePrdt12TestM -->
+      </class> <!-- testclasses.AdminUsersTestM -->
     </classes>
   </test> <!-- groceryapp(failed) -->
 </suite> <!-- Failed suite [MainProject] -->

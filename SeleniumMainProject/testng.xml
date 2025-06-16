@@ -4,8 +4,8 @@
 <parameter name="browzer" value="chrome"></parameter>
   <test thread-count="5" name="groceryapp">
    <classes>
-      <class name="testclasses.ManagePrdt12TestM">
-      
+     <!--  <class name="testclasses.ManagePrdt12TestM"> -->
+      <class name="testclasses.AdminUsersTestM">
      </class>
     </classes>
   </test> <!-- groceryapp -->
