@@ -8,35 +8,32 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class PageUtilities 
-{
+public class PageUtilities {
 	public WebDriver driver;
-	
 
-	public void selectByVisibleText(WebElement element, String text)
-	{
-		Select select=new Select(element);
+	public void selectByVisibleText(WebElement element, String text) {
+		Select select = new Select(element);
 		select.selectByVisibleText(text);
 	}
-	public void selectByValue(WebElement element, String value)
-	{
-		Select select=new Select(element);
+
+	public void selectByValue(WebElement element, String value) {
+		Select select = new Select(element);
 		select.selectByValue(value);
 	}
-	public void selectByIndex(WebElement element, int index)
-	{
-		Select select=new Select(element);
+
+	public void selectByIndex(WebElement element, int index) {
+		Select select = new Select(element);
 		select.selectByIndex(index);
 	}
-	public void scrollBy()//if by calling the method is not enough,can use the full code 
+
+	public void scrollBy() //if by calling this method is not enough or not getting the result,we can use the full code in the page classes
 	{
-		JavascriptExecutor scriptExecuter=(JavascriptExecutor) driver;
+		JavascriptExecutor scriptExecuter = (JavascriptExecutor) driver;
 		scriptExecuter.executeScript("window.scrollBy(0,1000)", "");
 	}
-	
-	public void actionDoubleClick()
-	{
-		Actions actions=new Actions(driver);
+
+	public void actionDoubleClick() {
+		Actions actions = new Actions(driver);
 		actions.doubleClick();
 	}
 }

@@ -11,17 +11,16 @@ import org.openqa.selenium.WebElement;
 
 public class FileUploadUtility 
 {
-	public void sendKeysForFileUplad(WebElement element, String path)
+	public void sendKeysForFileUplad(WebElement element, String path) 
 	{
 		element.sendKeys(path);
-		
+
 	}
-	
-	public void robotClassForFileUpload(WebElement element, String path) throws AWTException
-	{
-		StringSelection selection=new StringSelection(path);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,null);
-		Robot robot=new Robot();
+
+	public void robotClassForFileUpload(WebElement element, String path) throws AWTException {
+		StringSelection selection = new StringSelection(path);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+		Robot robot = new Robot();
 		robot.delay(2000);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);

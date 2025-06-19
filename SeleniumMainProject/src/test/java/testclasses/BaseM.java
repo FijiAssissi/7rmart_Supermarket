@@ -21,16 +21,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
-public class BaseM 
-{
- public WebDriver driver;
- public Properties properties;
- public FileInputStream fis;
-  @BeforeMethod (alwaysRun = true)
-  @Parameters ("browzer")
-  public void beforeMethod(String browzer) throws Exception 
-  {
-	  try {
+public class BaseM {
+	public WebDriver driver;
+	public Properties properties;
+	public FileInputStream fis;
+
+	@BeforeMethod(alwaysRun = true)
+	@Parameters("browzer")
+	public void beforeMethod(String browzer) throws Exception {
+		try {
 			properties = new Properties();
 			fis = new FileInputStream(Constants.CONFIGFILE);
 			properties.load(fis);
@@ -47,26 +46,23 @@ public class BaseM
 		} else {
 			throw new Exception("invalid browser");
 		}
-	 // driver=new ChromeDriver();
-	  driver.get(properties.getProperty("url"));
-	  driver.manage().window().maximize();
-	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	  //System.out.println(driver.getTitle());
-  }
-  
+		// driver=new ChromeDriver();
+		driver.get(properties.getProperty("url"));
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		// System.out.println(driver.getTitle());
+	}
 
-  @AfterMethod(alwaysRun = true)
-  public void afterMethod(ITestResult itResult) throws IOException 
-  {
-	 // driver.quit();
-	  if (itResult.getStatus() == ITestResult.FAILURE) {
-			ScreenShot sc = new ScreenShot();//screenshot is our class created under utiltiy package
+	@AfterMethod(alwaysRun = true)
+	public void afterMethod(ITestResult itResult) throws IOException {
+		// driver.quit();
+		if (itResult.getStatus() == ITestResult.FAILURE) {
+			ScreenShot sc = new ScreenShot();// ScreenShot is our class created under utility package
 			sc.captureFailureScreenShot(driver, itResult.getName());
 		}
-		if (driver != null) 
-		{
-			//driver.quit();
+		if (driver != null) {
+			// driver.quit();
 		}
-  }
+	}
 
 }

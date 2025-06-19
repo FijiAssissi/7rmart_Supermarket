@@ -4,8 +4,7 @@ import com.github.javafaker.Address;
 import com.github.javafaker.Book;
 import com.github.javafaker.Faker;
 
-public class FakeUtility 
-{
+public class FakeUtility {
 	public String getFakeFirstName() {
 
 		Faker faker = new Faker();
@@ -17,7 +16,8 @@ public class FakeUtility
 		return text;
 
 	}
-public String getPassword() {
+
+	public String getPassword() {
 
 		Faker faker = new Faker();
 
@@ -27,7 +27,9 @@ public String getPassword() {
 
 		return text;
 	}
-public String getFakeCityName() {
+
+	public String getFakeCityName() //use in adminUserstest 
+	{
 
 		Faker faker = new Faker();
 
@@ -38,16 +40,17 @@ public String getFakeCityName() {
 		return text;
 
 	}
-public String getFakeCategoryNameBook() //to use in ManageCategorypage
-{
 
-	Faker faker = new Faker();
+	public String getFakeCategoryNameBook() // to use in ManageCategorypage
+	{
 
-	Book book = faker.book();
+		Faker faker = new Faker();
 
-	String text = book.title();
+		Book book = faker.book();
 
-	return text;
+		String text = book.title();
 
-}
+		return text;
+
+	}
 }
