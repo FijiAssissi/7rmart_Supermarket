@@ -12,29 +12,27 @@ import pageclasses.LoginPageM;
 import pageclasses.ManageNewsPageM;
 import utilities.ExcelUtitlities;
 
-public class MangaeNewstestM extends BaseM
-{
+public class MangaeNewstestM extends BaseM {
 	LoginPageM login;
 	HomepageM home;
-	//AdminUsersPageM adminUsers;
+	// AdminUsersPageM adminUsers;
 	ManageNewsPageM manageNews;
-  @Test
-  public void EnterNewsInfo() throws IOException 
-  {
-	  LoginPageM loginPageM=new LoginPageM(driver);
-	  String userName=ExcelUtitlities.readStringData(1, 0, "LoginPageTest");//passing values using excel 
-		String password=ExcelUtitlities.readStringData(1, 1,"LoginPageTest" );
+
+	@Test
+	public void VerifyMangeNews() throws IOException {
+		LoginPageM loginPageM = new LoginPageM(driver);
+		String userName = ExcelUtitlities.readStringData(1, 0, "LoginPageTest");// passing values using excel
+		String password = ExcelUtitlities.readStringData(1, 1, "LoginPageTest");
 		loginPageM.addUserNamePassWord(userName, password);
-		 home=loginPageM.clickSignIn();
-		 manageNews=home.manageNewsmoreInfoClick();
+		home = loginPageM.clickSignIn();
+		manageNews = home.manageNewsmoreInfoClick();
 		// ManageNewsPageM managenewsobj=new ManageNewsPageM(driver);
 		manageNews.mangeNewsNewIcon().enterNewsInfo().clickOnSaveBtn();
-		 
-		 boolean manageNewsNewIconDisplayed= manageNews.mangenewsNewIconEnabled();
-		 boolean successAlert=manageNews.newsCreatedAlert();
-		 Assert.assertTrue(manageNewsNewIconDisplayed, Constants.ERRORMESSAGEFORMANAGEMOREINFO);
-		 Assert.assertTrue(successAlert, Constants.ERRORMESSAGE);
-	
-		 
-  }
+
+		boolean manageNewsNewIconDisplayed = manageNews.mangenewsNewIconEnabled();
+		boolean successAlert = manageNews.newsCreatedAlert();
+		Assert.assertTrue(manageNewsNewIconDisplayed, Constants.ERRORMESSAGEFORMANAGEMOREINFO);
+		Assert.assertTrue(successAlert, Constants.ERRORMESSAGE);
+
+	}
 }

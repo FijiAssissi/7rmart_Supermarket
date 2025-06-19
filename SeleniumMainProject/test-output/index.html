@@ -144,6 +144,9 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;MainProject&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;browzer&quot; value=&quot;chrome&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;generate_Report.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;groceryapp&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testclasses.AdminUsersTestM&quot;/&gt;
@@ -190,7 +193,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyAdminUsersTest')
 data.setCell(0, 2, 'testclasses.AdminUsersTestM')
-data.setCell(0, 3, 4203);
+data.setCell(0, 3, 4283);
 window.suiteTableData['MainProject']= { tableData: data, tableDiv: 'times-div-MainProject'}
 return data;
 }
@@ -228,11 +231,11 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAdminUsersTest</span>
-                <span class="method-start">4660 ms</span>
+                <span class="method-start">5683 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyAdminUsersTest status=SUCCESS method=AdminUsersTestM.verifyAdminUsersTest()[p...)</span>
-                <span class="method-start">8865 ms</span>
+                <span class="method-start">9970 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
